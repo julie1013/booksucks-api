@@ -4,8 +4,8 @@ curl --include --request POST http://localhost:3000/reviews \
     "review": {
       "title": "UnWholly",
       "body": "This disappointing sequel to Unwind has too many characters, exposition hell, and sentence structure that is beyond awkward.",
-      "user_id": "null",
-      "book_id": "null"
+      "user_id": "1",
+      "book_id": "6"
     }
   }'
 

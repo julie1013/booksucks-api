@@ -49,11 +49,11 @@ class ToReadListsController < ApplicationController
 
   private
 
-    def set_to_read_list
-      @to_read_list = ToReadList.find(params[:id])
-    end
+  def set_to_read_list
+    @to_read_list = ToReadList.find(params[:id])
+  end
 
-    def to_read_list_params
-      params.require(:to_read_list).permit(:user_id, :book_id)
-    end
+  def to_read_list_params
+    params.require(:to_read_list).permit(:user_id, :book_id)
+  end
 end

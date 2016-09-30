@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160929204929) do
+ActiveRecord::Schema.define(version: 20160930184821) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,6 +32,16 @@ ActiveRecord::Schema.define(version: 20160929204929) do
 
   add_index "examples", ["user_id"], name: "index_examples_on_user_id", using: :btree
 
+  create_table "qualified_books", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "book_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "qualified_books", ["book_id"], name: "index_qualified_books_on_book_id", using: :btree
+  add_index "qualified_books", ["user_id"], name: "index_qualified_books_on_user_id", using: :btree
+
   create_table "reviews", force: :cascade do |t|
     t.string   "title"
     t.text     "body"
@@ -43,16 +53,6 @@ ActiveRecord::Schema.define(version: 20160929204929) do
 
   add_index "reviews", ["book_id"], name: "index_reviews_on_book_id", using: :btree
   add_index "reviews", ["user_id"], name: "index_reviews_on_user_id", using: :btree
-
-  create_table "to_read_lists", force: :cascade do |t|
-    t.integer  "user_id"
-    t.integer  "book_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "to_read_lists", ["book_id"], name: "index_to_read_lists_on_book_id", using: :btree
-  add_index "to_read_lists", ["user_id"], name: "index_to_read_lists_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",           null: false
@@ -66,8 +66,8 @@ ActiveRecord::Schema.define(version: 20160929204929) do
   add_index "users", ["token"], name: "index_users_on_token", unique: true, using: :btree
 
   add_foreign_key "examples", "users"
+  add_foreign_key "qualified_books", "books"
+  add_foreign_key "qualified_books", "users"
   add_foreign_key "reviews", "books"
   add_foreign_key "reviews", "users"
-  add_foreign_key "to_read_lists", "books"
-  add_foreign_key "to_read_lists", "users"
 end

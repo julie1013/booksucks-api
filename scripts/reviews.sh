@@ -2,10 +2,10 @@ curl --include --request POST http://localhost:3000/reviews \
   --header "Content-Type: application/json" \
   --data '{
     "review": {
-      "title": "UnWholly",
-      "body": "This disappointing sequel to Unwind has too many characters, exposition hell, and sentence structure that is beyond awkward.",
+      "title": "Keeping Faith that this Book Will End Soon",
+      "body": "Another piece of shit from Jodi Picoult. This book is about a little girl who allegedly sees God and manages to convert the town atheist to Christianity. So if you are of another religion or do not have any religion, sorry, the theme in this book is not going to feel meaningful to you. But never fear: there are plenty of bullshit deepities and enough steamy sex scenes to keep the single, desperate middle-aged heterosexual woman interested.",
       "user_id": "1",
-      "book_id": "6"
+      "book_id": "1"
     }
   }'
 

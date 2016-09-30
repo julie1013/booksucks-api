@@ -2,18 +2,18 @@ curl --include --request POST http://localhost:3000/books \
   --header "Content-Type: application/json" \
   --data '{
     "book": {
-      "title": "Faith",
-      "author": "Jodi Picoult"
+      "title": "50 Shades of Grey",
+      "author": "E. L. James"
     }
   }'
 
 curl --include --request GET http://localhost:3000/books
 
-curl --include --request PATCH http://localhost:3000/books/2 \
+curl --include --request PATCH http://localhost:3000/books/3 \
   --header "Content-Type: application/json" \
   --data '{
     "book": {
-      "title": "Da Vinci Code, The",
+      "title": "The Da Vinci Code",
       "author": "Dan Brown"
     }
   }'

@@ -1,9 +1,9 @@
-curl --include --request POST http://localhost:3000/to_read_lists \
+curl --include --request POST http://localhost:3000/qualified_books \
   --header "Content-Type: application/json" \
   --data '{
-    "to_read_list": {
+    "qualified_book": {
       "user_id": "1",
-      "book_id": "2"
+      "book_id": "3"
     }
   }'
 

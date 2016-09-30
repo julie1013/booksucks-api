@@ -16,3 +16,15 @@
 #                password: 'abc123',
 #                password_confirmation: nil)
 # end
+User.create([
+              {email: "julie@julie.com", password: "julie"},
+              {email: "cat@cat.com", password: "cat"}
+])
+
+Book.create([
+              {title: "The Da Vinci Code", author: "Dan Brown"},
+              {title: "Keeping Faith", author: "Jodi Picoult"},
+              {title: "Mercy", author: "Jodi Picoult"},
+              {title: "50 Shades of Grey", author: "E. L. James"},
+              {title: "Twilight", author: "Stephanie Meyer"}
+  ])

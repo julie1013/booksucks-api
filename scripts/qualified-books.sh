@@ -7,4 +7,12 @@ curl --include --request POST http://localhost:3000/qualified_books \
     }
   }'
 
-curl --include --request DELETE http://localhost:3000/books/6
+  curl --include --request GET http://localhost:3000/qualified_books \
+    --header "Content-Type: application/json" \
+    --data '{
+      "qualified_book": {
+        "user_id": "1"
+      }
+    }'
+
+curl --include --request GET http://localhost:3000/qualified_books

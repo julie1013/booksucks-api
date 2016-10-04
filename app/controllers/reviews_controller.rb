@@ -3,7 +3,7 @@ class ReviewsController < ApplicationController
   def index
     user = params[:user_id]
     @reviews = if user
-                 Review.where(user: user).pluck(:id)
+                 Review.where(user: user)
                else
                  Review.all
                end

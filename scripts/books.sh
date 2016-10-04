@@ -91,5 +91,5 @@ curl --include --request PATCH http://localhost:3000/books/9 \
     }
   }'
 
-  curl --include --request DELETE http://localhost:3000/books/5 \
+  curl --include --request DELETE http://localhost:3000/books/11 \
       --header "Content-Type: application/json"

@@ -82,12 +82,12 @@ curl --include --request POST http://localhost:3000/books \
 curl --include --request GET http://localhost:3000/users/1/books
 
 
-curl --include --request PATCH http://localhost:3000/books/3 \
+curl --include --request PATCH http://localhost:3000/books/9 \
   --header "Content-Type: application/json" \
   --data '{
     "book": {
-      "title": "The Da Vinci Code",
-      "author": "Dan Brown"
+      "title": "My Sister\u0027s Keeper",
+      "author": "Jodi Picoult"
     }
   }'
 

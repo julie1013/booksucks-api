@@ -1,8 +1,12 @@
 class BooksController < ApplicationController
   before_action :set_book, only: [:show, :update, :destroy]
   def index
-    @books = Book.all
-
+    user = params[:user_id]
+    @books = if user
+               Book.where(id: QualifiedBook.where(user: user).pluck(:id))
+             else
+               Book.all
+             end
     render json: @books
   end
 

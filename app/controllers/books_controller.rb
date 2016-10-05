@@ -1,7 +1,7 @@
 class BooksController < ProtectedController
   before_action :set_book, only: [:show, :update, :destroy]
   def index
-    @books = Books.all
+    @books = Book.all
 
     render json: @books
   end

@@ -86,6 +86,10 @@ curl --include --request GET http://localhost:3000/my_books \
 --header "Authorization: Token token=BAhJIiVmM2UzMjhhNWQ0MGE5NzM2NGE5MTUzMGNlZTNhNzM2MAY6BkVG--b886b6110dfd0b8b939e719f1f2c9ce8f4e1256b" \
 --header "Content-Type: application/json"
 
+curl --include --request GET http://localhost:3000/books \
+--header "Authorization: Token token=BAhJIiVmM2UzMjhhNWQ0MGE5NzM2NGE5MTUzMGNlZTNhNzM2MAY6BkVG--b886b6110dfd0b8b939e719f1f2c9ce8f4e1256b" \
+--header "Content-Type: application/json"
+
 
 curl --include --request PATCH http://localhost:3000/books/9 \
   --header "Content-Type: application/json" \

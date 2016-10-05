@@ -1,12 +1,14 @@
-class BooksController < ApplicationController
+class BooksController < ProtectedController
   before_action :set_book, only: [:show, :update, :destroy]
   def index
-    user = params[:user_id]
-    @books = if user
-               Book.where(id: QualifiedBook.where(user: user).pluck(:id))
-             else
-               Book.all
-             end
+    @books = Book.all
+
+    render json: @books
+  end
+
+  def retrieve_user_books
+    @books = current_user.books
+
     render json: @books
   end
 

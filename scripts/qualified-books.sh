@@ -11,7 +11,8 @@ curl --include --request POST http://localhost:3000/qualified_books \
     --header "Content-Type: application/json" \
     --data '{
       "qualified_book": {
-        "user_id": "1"
+        "user_id": "4",
+        "book_id": "1"
       }
     }'
 

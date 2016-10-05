@@ -5,9 +5,11 @@ Rails.application.routes.draw do
   post '/sign-in' => 'users#signin'
   delete '/sign-out/:id' => 'users#signout'
   patch '/change-password/:id' => 'users#changepw'
-  resources :users, only: [:index, :show, :signup, :signout, :changepw] do
-    resources :books, :reviews
-  end
+  resources :users, only: [:index, :show, :signup, :signout, :changepw]
+  # do
+  #   resources :books, :reviews
+  # end
+  get '/my_books' => 'books#retrieve_user_books'
 
   resources :books, only: [:index, :show, :create, :update, :destroy]
   resources :reviews, only: [:index, :show, :create, :update, :destroy]

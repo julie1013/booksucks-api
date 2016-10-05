@@ -1,12 +1,8 @@
 class ReviewsController < ApplicationController
   before_action :set_review, only: [:show, :update, :destroy]
   def index
-    user = params[:user_id]
-    @reviews = if user
-                 Review.where(user: user)
-               else
-                 Review.all
-               end
+    @reviews = Review.all
+
     render json: @reviews
   end
 

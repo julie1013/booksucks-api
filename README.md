@@ -27,3 +27,6 @@ Upon resubmission, I will have all RESTful routes set up, including the
 ability to write and read scathing book reviews.
 
 App as it stands now: https://julie1013.github.io/booksucks-front-end/
+Wireframe: https://github.com/julie1013/booksucks-api/blob/master/IMG_1898.JPG
+Wireframe: https://github.com/julie1013/booksucks-api/blob/master/IMG_1899.JPG
+Wireframe: https://github.com/julie1013/booksucks-api/blob/master/IMG_1900.JPG

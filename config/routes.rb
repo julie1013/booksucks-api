@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   #   resources :books, :reviews
   # end
   get '/my_books' => 'books#retrieve_user_books'
+  # delete '/my_books' => 'qualified_books#delete_user_book'
 
   resources :books, only: [:index, :show, :create, :update, :destroy]
   resources :reviews, only: [:index, :show, :create, :update, :destroy]

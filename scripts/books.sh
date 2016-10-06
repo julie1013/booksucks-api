@@ -83,7 +83,7 @@ curl --include --request GET http://localhost:3000/users/1/books
 
 
 curl --include --request GET http://localhost:3000/my_books \
---header "Authorization: Token token=BAhJIiVmM2UzMjhhNWQ0MGE5NzM2NGE5MTUzMGNlZTNhNzM2MAY6BkVG--b886b6110dfd0b8b939e719f1f2c9ce8f4e1256b" \
+--header "Authorization: Token token=BAhJIiU1N2MwNjdjOGE1ODM4NGVhMWUzYTRhZjMzZjYwNWE5MwY6BkVG--f289999ee48cbc83b0f25d0adbfe5290266f1e26" \
 --header "Content-Type: application/json"
 
 curl --include --request GET http://localhost:3000/books \
@@ -99,5 +99,11 @@ curl --include --request PATCH http://localhost:3000/books/9 \
     }
   }'
 
-  curl --include --request DELETE http://localhost:3000/books/11 \
-      --header "Content-Type: application/json"
+curl --include --request DELETE http://localhost:3000/books/11 \
+    --header "Content-Type: application/json"
+
+
+curl --include --request DELETE http://localhost:3000/my_books/1 \
+  --header "Authorization: Token token=BAhJIiU1N2MwNjdjOGE1ODM4NGVhMWUzYTRhZjMzZjYwNWE5MwY6BkVG--f289999ee48cbc83b0f25d0adbfe5290266f1e26" \
+  --header "Content-Type: application/json"
+#did I do this right?

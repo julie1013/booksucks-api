@@ -47,6 +47,13 @@ class QualifiedBooksController < ApplicationController
     head :no_content
   end
 
+  # def delete_user_book
+  #   @qualified_book = current_user.qualified_book
+  #   @qualified_book.destroy
+  #
+  #   head :no_content
+  # end
+
   private
 
   def set_qualified_book

@@ -18,16 +18,19 @@ class QualifiedBooksController < ProtectedController
   # POST /qualified_books
   # POST /qualified_books.json
   def create
-    book_id = qualified_book_params[:book_id]
+    book_id = qualified_book_params[:book_id].to_i
+    if !current_user.book_ids.include? book_id
+      @qualified_book = QualifiedBook.new book_id: book_id
+      @qualified_book.user = current_user
 
-    @qualified_book = QualifiedBook.new book_id: book_id
-    @qualified_book.user = current_user
-
-    if @qualified_book.save
-      render json: @qualified_book.to_json(include: :book), status: :created,
-             location: @qualified_book
+      if @qualified_book.save
+        render json: @qualified_book.to_json(include: :book), status: :created,
+               location: @qualified_book
+      else
+        render json: @qualified_book.errors, status: :unprocessable_entity
+      end
     else
-      render json: @qualified_book.errors, status: :unprocessable_entity
+      head :unprocessable_entity
     end
   end
 

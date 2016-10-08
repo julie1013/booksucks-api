@@ -1,16 +1,19 @@
 class BooksController < ProtectedController
   before_action :set_book, only: [:show, :update, :destroy]
   def index
-    @books = Book.all
-
+    @books = if current_user
+               current_user.books
+             else
+               Book.all
+             end
     render json: @books
   end
 
-  def retrieve_user_books
-    @books = current_user.books
-
-    render json: @books
-  end
+  # def retrieve_user_books
+  #   @books = current_user.books
+  #
+  #   render json: @books
+  # end
 
   def show
     render json: Book.find(params[:id])

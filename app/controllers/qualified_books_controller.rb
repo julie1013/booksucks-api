@@ -1,4 +1,4 @@
-class QualifiedBooksController < ApplicationController
+class QualifiedBooksController < ProtectedController
   before_action :set_qualified_book, only: [:show, :update, :destroy]
 
   # GET /qualified_books
@@ -46,13 +46,6 @@ class QualifiedBooksController < ApplicationController
 
     head :no_content
   end
-
-  # def delete_user_book
-  #   @qualified_book = current_user.qualified_book
-  #   @qualified_book.destroy
-  #
-  #   head :no_content
-  # end
 
   private
 

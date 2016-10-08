@@ -1,10 +1,10 @@
-class QualifiedBooksController < ApplicationController
+class QualifiedBooksController < ProtectedController
   before_action :set_qualified_book, only: [:show, :update, :destroy]
 
   # GET /qualified_books
   # GET /qualified_booksjson
   def index
-    @qualified_books = QualifiedBook.all
+    @qualified_books = current_user.books
 
     render json: @qualified_books
   end
@@ -18,12 +18,19 @@ class QualifiedBooksController < ApplicationController
   # POST /qualified_books
   # POST /qualified_books.json
   def create
-    @qualified_book = QualifiedBook.new(qualified_book_params)
+    book_id = qualified_book_params[:book_id].to_i
+    if !current_user.book_ids.include? book_id
+      @qualified_book = QualifiedBook.new book_id: book_id
+      @qualified_book.user = current_user
 
-    if @qualified_book.save
-      render json: @qualified_book, status: :created, location: @qualified_book
+      if @qualified_book.save
+        render json: @qualified_book.to_json(include: :book), status: :created,
+               location: @qualified_book
+      else
+        render json: @qualified_book.errors, status: :unprocessable_entity
+      end
     else
-      render json: @qualified_book.errors, status: :unprocessable_entity
+      head :unprocessable_entity
     end
   end
 

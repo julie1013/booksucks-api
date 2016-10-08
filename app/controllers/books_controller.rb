@@ -6,7 +6,7 @@ class BooksController < ProtectedController
     render json: @books
   end
 
-  def retrieve_user_books
+  def user_books
     @books = current_user.books
 
     render json: @books
@@ -39,6 +39,13 @@ class BooksController < ProtectedController
 
     head :no_content
   end
+
+  # def delete_user_book
+  #   @book = current_user.book
+  #   @book.destroy
+  #
+  #   head :no_content
+  # end
 
   def set_book
     @book = Book.find(params[:id])

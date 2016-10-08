@@ -19,5 +19,5 @@ curl --include --request DELETE http://localhost:3000/qualified_books/2 \
 curl --include --request GET http://localhost:3000/qualified_books/4/ \
     --header "Authorization: Token token=BAhJIiU1YjBiODY3M2FhNTIxMzY4Yzk1MmY0ODJiOTA2YzcwMAY6BkVG--cd6612e90a4c57c412577ef89e0ca2fefa226490"
 
-curl --include --request GET http://localhost:3000/qualified_books \
-      --header "Authorization: Token token=BAhJIiU0NjYwNTQ5ZDA0MjM1OTBlMGM1MzQxNzVmZmViYjFjNAY6BkVG--2ff4afd6f1f1c0862f0f8a002257c18ccc87b3f8"
+curl --include --request GET http://localhost:3000/qualified_books/ \
+      --header "Authorization: Token token=BAhJIiUxMDI2MTBjN2UxZGE3NjNmZjI1ZmUxMGJlMWNjNWFiNQY6BkVG--c002ce6e30e37aa704b5d2a46c21e4348b90282b"

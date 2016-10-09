@@ -4,10 +4,10 @@ class QualifiedBooksController < ProtectedController
   # GET /qualified_books
   # GET /qualified_booksjson
   def index
-    @qualified_books = current_user.books
+    @qualified_books = current_user.qualified_books
 
-    render json: @qualified_books
-  end
+   render json: @qualified_books.to_json(include: :book)
+ end
 
   # GET /qualified_books/1
   # GET /qualified_books/1.json

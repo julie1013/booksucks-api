@@ -6,12 +6,6 @@ class BooksController < ProtectedController
     render json: @books
   end
 
-  def user_books
-    @books = current_user.books
-
-    render json: @books
-  end
-
   def show
     render json: Book.find(params[:id])
   end

@@ -4,9 +4,9 @@ class QualifiedBooksController < ProtectedController
   # GET /qualified_books
   # GET /qualified_booksjson
   def index
-    @qualified_books = current_user.books
+    @qualified_books = current_user.qualified_books
 
-    render json: @qualified_books
+    render json: @qualified_books.to_json(include: :book)
   end
 
   # GET /qualified_books/1
@@ -20,11 +20,12 @@ class QualifiedBooksController < ProtectedController
   def create
     book_id = qualified_book_params[:book_id].to_i
     if !current_user.book_ids.include? book_id
-      @qualified_book = QualifiedBook.new book_id: book_id
+      @qualified_book = QualifiedBook.new qualified_book_params
       @qualified_book.user = current_user
 
       if @qualified_book.save
-        render json: @qualified_book.to_json(include: :book), status: :created,
+        render json: @qualified_book.to_json(include: :book),
+               status: :created,
                location: @qualified_book
       else
         render json: @qualified_book.errors, status: :unprocessable_entity
@@ -38,9 +39,8 @@ class QualifiedBooksController < ProtectedController
   # PATCH/PUT /qualified_books/1.json
   def update
     @qualified_book = QualifiedBook.find(params[:id])
-
     if @qualified_book.update(qualified_book_params)
-      head :no_content
+      render json: @qualified_book
     else
       render json: @qualified_book.errors, status: :unprocessable_entity
     end
@@ -61,6 +61,6 @@ class QualifiedBooksController < ProtectedController
   end
 
   def qualified_book_params
-    params.require(:qualified_book).permit(:user_id, :book_id)
+    params.require(:qualified_book).permit(:user_id, :book_id, :notes)
   end
 end

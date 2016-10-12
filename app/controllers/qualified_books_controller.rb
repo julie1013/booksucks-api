@@ -46,6 +46,15 @@ class QualifiedBooksController < ProtectedController
     end
   end
 
+  def update_notes
+    @qualified_book = QualifiedBook.find(params[:id])
+    if @qualified_book.update(qualified_book_params)
+      render json: @qualified_book
+    else
+      render json: @qualified_book.errors, status: :unprocessable_entity
+    end
+  end
+
   # DELETE /qualified_books/1
   # DELETE /qualified_books/1.json
   def destroy

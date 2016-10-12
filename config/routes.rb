@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   delete '/sign-out/:id' => 'users#signout'
   patch '/change-password/:id' => 'users#changepw'
   delete '/qualified_books/:id' => 'qualified_books#destroy'
+  patch '/qualified_books/:id' => 'qualified_books#update_notes'
 
   resources :books, only: [:index, :show, :create, :update, :destroy]
   resources :reviews, only: [:index, :show, :create, :update, :destroy]

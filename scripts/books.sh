@@ -2,11 +2,11 @@
 
 
 curl --include --request POST https://booksucks.herokuapp.com/books \
---header "Authorization: Token token=BAhJIiUzYWRiNzViNjc0N2Q4ZWNjOTdkOTZlMzc4YTdhOGMxNgY6BkVG--c26ea9e5c80cb9b075384849abd12aa196ce906c" \
+--header "Authorization: Token token=BAhJIiVmNWVjODg1ZTNjNWFhYzVkNTQ1ZGVjMWZjZjZhZWYxMAY6BkVG--acfff599c73e5d3127c7a4c1ad3b4eb0bfd7f5df" \
 --header "Content-Type: application/json" \
   --data '{
     "book": {
-      "title": "50 Shades of Grey",
+      "title": "50 Shades of STUPID",
       "author": "E. L. James"
     }
   }'

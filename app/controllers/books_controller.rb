@@ -10,8 +10,39 @@ class BooksController < ProtectedController
     render json: Book.find(params[:id])
   end
 
+  def create
+    @book = Book.new(book_params)
+
+    if @book.save
+      render json: @book, status: :created, location: @book
+    else
+      render json: @book.errors, status: :unprocessable_entity
+    end
+  end
+
+  def update
+    if @book.update(book_params)
+      head :no_content
+    else
+      render json: @book.errors, status: :unprocessable_entity
+    end
+  end
+
+  def destroy
+    @book.destroy
+
+    head :no_content
+  end
+
+  # def delete_user_book
+  #   @book = current_user.book
+  #   @book.destroy
+  #
+  #   head :no_content
+  # end
+
   def set_book
-    @book = current_user.books.find(params[:id])
+    @book = Book.find(params[:id])
   end
 
   def book_params

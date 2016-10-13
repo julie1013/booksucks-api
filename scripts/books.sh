@@ -100,10 +100,10 @@ curl --include --request PATCH http://localhost:3000/books/9 \
 
 
 curl --include --request DELETE https://booksucks.herokuapp.com/books/1 \
---header "Authorization: Token token=BAhJIiU0NGMxM2Q2NDQwMjg2NjNiODliNmJlNzFmNjYxYzUxMAY6BkVG--79dbe5033c4648b6469ef6ffa2d707b7efcea529" \
+--header "Authorization: Token token=BAhJIiUzYmFmYTRmMjUxN2Q4MTBlYTk2Mjk1OGQ4NjI3Yjc2ZgY6BkVG--4979d622f021f2eaef8d418e7ca5795c00424d8c" \
 --header "Content-Type: application/json"
 
 
 curl --include --request DELETE http://localhost:3000/books/1 \
-  --header "Authorization: Token token=BAhJIiU5NmY2MmNhOWEzYmVmZTJhNjU4ZDI0NGFlYjQ1YTFlNAY6BkVG--07a7e78f1b47900bd89d27933e6c3dfe402f3115" \
+  --header "Authorization: Token token=BAhJIiU4MmYwMDA2MWQ4ZjdhNjRhZmQwZjE2M2QyZTgxNjE5MwY6BkVG--132e1c12dc9eec0f6a5c145b7120feac0a846140" \
   --header "Content-Type: application/json"

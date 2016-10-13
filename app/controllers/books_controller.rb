@@ -1,4 +1,4 @@
-class BooksController < ProtectedController
+class BooksController < ApplicationController
   before_action :set_book, only: [:show, :update, :destroy]
   def index
     @books = Book.all
@@ -42,7 +42,7 @@ class BooksController < ProtectedController
   # end
 
   def set_book
-    @book = current_user.books.find(params[:id])
+    @book = Book.find(params[:id])
   end
 
   def book_params

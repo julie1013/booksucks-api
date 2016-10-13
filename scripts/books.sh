@@ -1,4 +1,7 @@
-curl --include --request POST http://localhost:3000/books \
+
+
+
+curl --include --request POST https://booksucks.herokuapp.com/books \
   --header "Content-Type: application/json" \
   --data '{
     "book": {
@@ -95,8 +98,9 @@ curl --include --request PATCH http://localhost:3000/books/9 \
     }
   }'
 
-curl --include --request DELETE http://localhost:3000/books/11 \
+curl --include --request DELETE https://booksucks.herokuapp.com/books/1 \
     --header "Content-Type: application/json"
+    --header "Authorization: Token token=BAhJIiUxMmRhNDZiNGJmZTk4MmE3ZWE1ODcwYTQ1NGRiN2Y4NAY6BkVG--c11c2602a03d00db73978d6cf75e505111dae423" \
 
 
 curl --include --request DELETE http://localhost:3000/books/1 \

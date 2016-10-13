@@ -2,7 +2,7 @@
 
 
 curl --include --request POST https://booksucks.herokuapp.com/books \
---header "Authorization: Token token=BAhJIiU2OWYwOWM2Y2Q1MWIwMjA2MjVjZGM2NzhjNjU3MzY4NAY6BkVG--362ab53853ad31c62f71aba5b146354093bf1e59" \
+--header "Authorization: Token token=BAhJIiUzYWRiNzViNjc0N2Q4ZWNjOTdkOTZlMzc4YTdhOGMxNgY6BkVG--c26ea9e5c80cb9b075384849abd12aa196ce906c" \
 --header "Content-Type: application/json" \
   --data '{
     "book": {
@@ -12,7 +12,7 @@ curl --include --request POST https://booksucks.herokuapp.com/books \
   }'
 
   curl --include --request POST https://booksucks.herokuapp.com/books \
-  --header "Authorization: Token token=BAhJIiU2OWYwOWM2Y2Q1MWIwMjA2MjVjZGM2NzhjNjU3MzY4NAY6BkVG--362ab53853ad31c62f71aba5b146354093bf1e59" \
+  --header "Authorization: Token token=BAhJIiUzYWRiNzViNjc0N2Q4ZWNjOTdkOTZlMzc4YTdhOGMxNgY6BkVG--c26ea9e5c80cb9b075384849abd12aa196ce906c" \
   --header "Content-Type: application/json" \
     --data '{
       "book": {
@@ -21,8 +21,18 @@ curl --include --request POST https://booksucks.herokuapp.com/books \
       }
     }'
 
+    curl --include --request POST https://booksucks.herokuapp.com/books \
+    --header "Authorization: Token token=BAhJIiUzYWRiNzViNjc0N2Q4ZWNjOTdkOTZlMzc4YTdhOGMxNgY6BkVG--c26ea9e5c80cb9b075384849abd12aa196ce906c" \
+    --header "Content-Type: application/json" \
+      --data '{
+        "book": {
+          "title": "Keeping Faith",
+          "author": "Jodi Picoult"
+        }
+      }'
+
   curl --include --request POST https://booksucks.herokuapp.com/books \
-  --header "Authorization: Token token=BAhJIiU2OWYwOWM2Y2Q1MWIwMjA2MjVjZGM2NzhjNjU3MzY4NAY6BkVG--362ab53853ad31c62f71aba5b146354093bf1e59" \
+  --header "Authorization: Token token=BAhJIiUzYWRiNzViNjc0N2Q4ZWNjOTdkOTZlMzc4YTdhOGMxNgY6BkVG--c26ea9e5c80cb9b075384849abd12aa196ce906c" \
   --header "Content-Type: application/json" \
     --data '{
       "book": {
@@ -32,7 +42,7 @@ curl --include --request POST https://booksucks.herokuapp.com/books \
     }'
 
   curl --include --request POST https://booksucks.herokuapp.com/books \
-  --header "Authorization: Token token=BAhJIiU2OWYwOWM2Y2Q1MWIwMjA2MjVjZGM2NzhjNjU3MzY4NAY6BkVG--362ab53853ad31c62f71aba5b146354093bf1e59" \
+  --header "Authorization: Token token=BAhJIiUzYWRiNzViNjc0N2Q4ZWNjOTdkOTZlMzc4YTdhOGMxNgY6BkVG--c26ea9e5c80cb9b075384849abd12aa196ce906c" \
   --header "Content-Type: application/json" \
     --data '{
       "book": {
@@ -42,7 +52,7 @@ curl --include --request POST https://booksucks.herokuapp.com/books \
     }'
 
   curl --include --request POST https://booksucks.herokuapp.com/books \
-  --header "Authorization: Token token=BAhJIiU2OWYwOWM2Y2Q1MWIwMjA2MjVjZGM2NzhjNjU3MzY4NAY6BkVG--362ab53853ad31c62f71aba5b146354093bf1e59" \
+  --header "Authorization: Token token=BAhJIiUzYWRiNzViNjc0N2Q4ZWNjOTdkOTZlMzc4YTdhOGMxNgY6BkVG--c26ea9e5c80cb9b075384849abd12aa196ce906c" \
   --header "Content-Type: application/json" \
     --data '{
       "book": {
@@ -52,7 +62,7 @@ curl --include --request POST https://booksucks.herokuapp.com/books \
     }'
 
   curl --include --request POST https://booksucks.herokuapp.com/books \
-  --header "Authorization: Token token=BAhJIiU2OWYwOWM2Y2Q1MWIwMjA2MjVjZGM2NzhjNjU3MzY4NAY6BkVG--362ab53853ad31c62f71aba5b146354093bf1e59" \
+  --header "Authorization: Token token=BAhJIiUzYWRiNzViNjc0N2Q4ZWNjOTdkOTZlMzc4YTdhOGMxNgY6BkVG--c26ea9e5c80cb9b075384849abd12aa196ce906c" \
   --header "Content-Type: application/json" \
     --data '{
       "book": {
@@ -62,7 +72,7 @@ curl --include --request POST https://booksucks.herokuapp.com/books \
     }'
 
     curl --include --request POST https://booksucks.herokuapp.com/books \
-    --header "Authorization: Token token=BAhJIiU5MGFlOTQ4NzY3NDczNmY1M2U5NThkNzE3MTg3ZjJkZAY6BkVG--a7d2ba43bfa9f099e42ab10c1f415c2f52b6400a" \
+    --header "Authorization: Token token=BAhJIiUzYWRiNzViNjc0N2Q4ZWNjOTdkOTZlMzc4YTdhOGMxNgY6BkVG--c26ea9e5c80cb9b075384849abd12aa196ce906c" \
     --header "Content-Type: application/json" \
       --data '{
         "book": {
@@ -72,28 +82,28 @@ curl --include --request POST https://booksucks.herokuapp.com/books \
       }'
 
     curl --include --request POST https://booksucks.herokuapp.com/books \
-    --header "Authorization: Token token=BAhJIiU5MGFlOTQ4NzY3NDczNmY1M2U5NThkNzE3MTg3ZjJkZAY6BkVG--a7d2ba43bfa9f099e42ab10c1f415c2f52b6400a" \
+    --header "Authorization: Token token=BAhJIiUzYWRiNzViNjc0N2Q4ZWNjOTdkOTZlMzc4YTdhOGMxNgY6BkVG--c26ea9e5c80cb9b075384849abd12aa196ce906c" \
     --header "Content-Type: application/json" \
       --data '{
         "book": {
-          "title": "My Sister/s Keeper",
+          "title": "My Sister\u0027s Keeper",
           "author": "Jodi Picoult"
         }
       }'
 
     curl --include --request POST https://booksucks.herokuapp.com/books \
-    --header "Authorization: Token token=BAhJIiU5MGFlOTQ4NzY3NDczNmY1M2U5NThkNzE3MTg3ZjJkZAY6BkVG--a7d2ba43bfa9f099e42ab10c1f415c2f52b6400a" \
+    --header "Authorization: Token token=BAhJIiUzYWRiNzViNjc0N2Q4ZWNjOTdkOTZlMzc4YTdhOGMxNgY6BkVG--c26ea9e5c80cb9b075384849abd12aa196ce906c" \
     --header "Content-Type: application/json" \
       --data '{
         "book": {
-          "title": "Nineteen",
+          "title": "Nineteen Minutes",
           "author": "Jodi Picoult"
         }
       }'
 
 
-curl --include --request GET http://localhost:3000/books \
---header "Authorization: Token token=BAhJIiU5MGFlOTQ4NzY3NDczNmY1M2U5NThkNzE3MTg3ZjJkZAY6BkVG--a7d2ba43bfa9f099e42ab10c1f415c2f52b6400a" \
+curl --include --request GET https://booksucks.herokuapp.com/books \
+--header "Authorization: Token token=BAhJIiUzYWRiNzViNjc0N2Q4ZWNjOTdkOTZlMzc4YTdhOGMxNgY6BkVG--c26ea9e5c80cb9b075384849abd12aa196ce906c" \
 --header "Content-Type: application/json"
 
 curl --include --request PATCH http://localhost:3000/books/9 \
@@ -107,8 +117,8 @@ curl --include --request PATCH http://localhost:3000/books/9 \
   }'
 
 
-curl --include --request DELETE https://booksucks.herokuapp.com/books/12 \
---header "Authorization: Token token=BAhJIiU5MGFlOTQ4NzY3NDczNmY1M2U5NThkNzE3MTg3ZjJkZAY6BkVG--a7d2ba43bfa9f099e42ab10c1f415c2f52b6400a" \
+curl --include --request DELETE https://booksucks.herokuapp.com/books/14 \
+--header "Authorization: Token token=BAhJIiUzYWRiNzViNjc0N2Q4ZWNjOTdkOTZlMzc4YTdhOGMxNgY6BkVG--c26ea9e5c80cb9b075384849abd12aa196ce906c" \
 --header "Content-Type: application/json"
 
 

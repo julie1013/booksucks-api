@@ -1,5 +1,5 @@
 class QualifiedBooksController < ProtectedController
-  before_action :set_qualified_book, only: [:show, :update, :destroy]
+  before_action :set_qualified_book, only: [:show, :update, :update_notes, :destroy]
 
   # GET /qualified_books
   # GET /qualified_booksjson
@@ -66,7 +66,7 @@ class QualifiedBooksController < ProtectedController
   private
 
   def set_qualified_book
-    @qualified_book = QualifiedBook.find(params[:id])
+    @qualified_book = current_user.qualified_books.find(params[:id])
   end
 
   def qualified_book_params

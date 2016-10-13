@@ -92,18 +92,18 @@ curl --include --request POST https://booksucks.herokuapp.com/books \
       }'
 
     curl --include --request POST https://booksucks.herokuapp.com/books \
-    --header "Authorization: Token token=BAhJIiUzYWRiNzViNjc0N2Q4ZWNjOTdkOTZlMzc4YTdhOGMxNgY6BkVG--c26ea9e5c80cb9b075384849abd12aa196ce906c" \
+    --header "Authorization: Token token=BAhJIiU5ZDE1ZDhmNzBkMjMzNzU4ZGJkZmQ4NzFmNDE2YTc1ZAY6BkVG--56941ed7ef12710dec973511c910c851105ae41c" \
     --header "Content-Type: application/json" \
       --data '{
         "book": {
-          "title": "Nineteen Minutes",
+          "title": "Twenty Minutes",
           "author": "Jodi Picoult"
         }
       }'
 
 
-curl --include --request DELETE https://booksucks.herokuapp.com/books/25 \
---header "Authorization: Token token=BAhJIiVhNWMzODM3ZGY0YmQyZWNjNTRkMGU1MTYzYTUyZDQ0YgY6BkVG--d650141c08b88ef2ccdd54f80a575d625da0165a" \
+curl --include --request DELETE https://booksucks.herokuapp.com/books/24 \
+--header "Authorization: Token token=BAhJIiU5ZDE1ZDhmNzBkMjMzNzU4ZGJkZmQ4NzFmNDE2YTc1ZAY6BkVG--56941ed7ef12710dec973511c910c851105ae41c" \
 --header "Content-Type: application/json"
 
 curl --include --request PATCH http://localhost:3000/books/9 \

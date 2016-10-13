@@ -102,8 +102,8 @@ curl --include --request POST https://booksucks.herokuapp.com/books \
       }'
 
 
-curl --include --request GET https://booksucks.herokuapp.com/books \
---header "Authorization: Token token=BAhJIiUzYWRiNzViNjc0N2Q4ZWNjOTdkOTZlMzc4YTdhOGMxNgY6BkVG--c26ea9e5c80cb9b075384849abd12aa196ce906c" \
+curl --include --request DELETE https://booksucks.herokuapp.com/books/25 \
+--header "Authorization: Token token=BAhJIiU2NWI0ZjQ4MTNiNjZjMTc3YzJmZjExMzIyODY1NGI2MgY6BkVG--c51d46ceb39bcde2ad20a1651b7839bdace6950d" \
 --header "Content-Type: application/json"
 
 curl --include --request PATCH http://localhost:3000/books/9 \
@@ -117,8 +117,8 @@ curl --include --request PATCH http://localhost:3000/books/9 \
   }'
 
 
-curl --include --request DELETE https://booksucks.herokuapp.com/books/14 \
---header "Authorization: Token token=BAhJIiUzYWRiNzViNjc0N2Q4ZWNjOTdkOTZlMzc4YTdhOGMxNgY6BkVG--c26ea9e5c80cb9b075384849abd12aa196ce906c" \
+curl --include --request DELETE https://booksucks.herokuapp.com/books/25 \
+--header "Authorization: Token token=BAhJIiU2NWI0ZjQ4MTNiNjZjMTc3YzJmZjExMzIyODY1NGI2MgY6BkVG--c51d46ceb39bcde2ad20a1651b7839bdace6950d" \
 --header "Content-Type: application/json"
 
 

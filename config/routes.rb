@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   delete '/qualified_books/:id' => 'qualified_books#destroy'
   patch '/qualified_books/:id' => 'qualified_books#update_notes'
 
-  resources :books, only: [:index, :show]
+  resources :books, only: [:index, :show, :destroy]
   resources :qualified_books, except: [:new, :edit]
   # resources :reviews, only: [:index, :show, :create, :update, :destroy]
 end

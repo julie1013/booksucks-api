@@ -72,25 +72,25 @@ curl --include --request POST http://localhost:3000/books \
 
     curl --include --request POST http://localhost:3000/books \
       --header "Content-Type: application/json" \
+      --header "Authorization: Token token=BAhJIiU5ZWJkMzM5NWJkY2E3ODMyNTE5MzlhY2MwY2M2YTg0ZgY6BkVG--2615e98190d12402601fd8cc5596d9e93f8873de"\
       --data '{
         "book": {
-          "title": "Nineteen Minutes",
+          "title": "Twenty Minutes",
           "author": "Jodi Picoult"
         }
       }'
 
-curl --include --request GET http://localhost:3000/users/1/books
-
 
 curl --include --request GET http://localhost:3000/books \
---header "Authorization: Token token=BAhJIiUzM2UwNWZjMzE5N2UwZWQwMmIzNTI4MDg4YzFlYzIzZAY6BkVG--78a3fc9446ed71dcf26297512d65bbaa29a810de" \
+--header "Authorization: Token token=BAhJIiU5ZWJkMzM5NWJkY2E3ODMyNTE5MzlhY2MwY2M2YTg0ZgY6BkVG--2615e98190d12402601fd8cc5596d9e93f8873de" \
 --header "Content-Type: application/json"
 
 curl --include --request PATCH http://localhost:3000/books/9 \
   --header "Content-Type: application/json" \
+  --header "Authorization: Token token=BAhJIiU5ZWJkMzM5NWJkY2E3ODMyNTE5MzlhY2MwY2M2YTg0ZgY6BkVG--2615e98190d12402601fd8cc5596d9e93f8873de" \
   --data '{
     "book": {
-      "title": "My Sister\u0027s Keeper",
+      "title": "My Sister\u0027s Kesafeper",
       "author": "Jodi Picoult"
     }
   }'
@@ -99,7 +99,6 @@ curl --include --request DELETE http://localhost:3000/books/11 \
     --header "Content-Type: application/json"
 
 
-curl --include --request DELETE http://localhost:3000/my_books/1 \
-  --header "Authorization: Token token=BAhJIiU1N2MwNjdjOGE1ODM4NGVhMWUzYTRhZjMzZjYwNWE5MwY6BkVG--f289999ee48cbc83b0f25d0adbfe5290266f1e26" \
+curl --include --request DELETE http://localhost:3000/books/1 \
+  --header "Authorization: Token token=BAhJIiU5ZWJkMzM5NWJkY2E3ODMyNTE5MzlhY2MwY2M2YTg0ZgY6BkVG--2615e98190d12402601fd8cc5596d9e93f8873de" \
   --header "Content-Type: application/json"
-#did I do this right?

@@ -42,7 +42,7 @@ class BooksController < ProtectedController
   # end
 
   def set_book
-    @book = Book.find(params[:id])
+    @book = current_user.books.find(params[:id])
   end
 
   def book_params
